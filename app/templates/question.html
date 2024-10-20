@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Question{% endblock %}
+{% block content %}
+    <h1>{{ question.title }}</h1>
+    <p>{{ question.body }}</p>
+
+    <h2>Answers</h2>
+    <ul>
+    {% if question.answers %}
+        {% for answer in question.answers %}
+            <li>{{ answer.body }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No answers yet.</li>
+    {% endif %}
+    </ul>
+
+    <h3>Submit an Answer</h3>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.body.label }}<br>{{ form.body() }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

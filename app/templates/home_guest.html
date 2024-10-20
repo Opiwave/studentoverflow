@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>StudentOverflow</h1>
+    <ul>
+    {% for question in questions %}
+        <li><a href="{{ url_for('main.question', question_id=question.id) }}">{{ question.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <p>¿Tienes una pregunta o respuesta? <a href="{{ url_for('auth.login') }}">Inicia sesión</a> o <a href="{{ url_for('auth.register') }}">Regístrate</a> para responder.</p>
+{% endblock %}
