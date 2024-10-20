@@ -15,7 +15,7 @@ Este es un programa básico de plataforma de preguntas y respuestas, donde los u
 1. Clona este repositorio:
 
 
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/Opiwave/studentoverflow.git
    cd tu_repositorio
 
 2. Crea un entorno virtual y actívalo:
